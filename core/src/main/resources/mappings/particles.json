@@ -1,0 +1,398 @@
+{
+  "minecraft:angry_villager": {
+    "bedrock_id": "minecraft:villager_angry"
+  },
+  "minecraft:ash": {
+    "bedrock_id": "geyseropt:ash"
+  },
+  "minecraft:block": {
+    "built_in": {}
+  },
+  "minecraft:block_crumble": {
+    "bedrock_id": "minecraft:creaking_crumble_body"
+  },
+  "minecraft:bubble": {
+    "bedrock_id": "minecraft:basic_bubble_particle_manual"
+  },
+  "minecraft:bubble_column_up": {
+    "bedrock_id": "minecraft:bubble_column_up_particle"
+  },
+  "minecraft:bubble_pop": {
+    "bedrock_id": "minecraft:bubble_column_bubble"
+  },
+  "minecraft:campfire_cosy_smoke": {
+    "bedrock_id": "minecraft:campfire_smoke_particle"
+  },
+  "minecraft:campfire_signal_smoke": {
+    "bedrock_id": "minecraft:campfire_tall_smoke_particle"
+  },
+  "minecraft:cherry_leaves": {
+    "bedrock_id": "minecraft:cherry_leaves_particle"
+  },
+  "minecraft:cloud": {
+    "bedrock_id": "minecraft:water_evaporation_bucket_emitter"
+  },
+  "minecraft:composter": {
+    "bedrock_id": "minecraft:villager_happy"
+  },
+  "minecraft:copper_fire_flame": {
+    "bedrock_id": "minecraft:green_flame_particle"
+  },
+  "minecraft:crimson_spore": {
+    "bedrock_id": "geyseropt:crimson_spore"
+  },
+  "minecraft:crit": {
+    "bedrock_id": "minecraft:critical_hit_emitter"
+  },
+  "minecraft:current_down": {
+    "bedrock_id": "minecraft:bubble_column_down_particle"
+  },
+  "minecraft:damage_indicator": {
+    "bedrock_id": "geyseropt:damage_indicator"
+  },
+  "minecraft:dolphin": {
+    "bedrock_id": "minecraft:dolphin_move_particle"
+  },
+  "minecraft:dragon_breath": {
+    "bedrock_id": "minecraft:dragon_breath_lingering"
+  },
+  "minecraft:dripping_dripstone_lava": {
+    "bedrock_id": "minecraft:stalactite_lava_drip_particle"
+  },
+  "minecraft:dripping_dripstone_water": {
+    "bedrock_id": "minecraft:stalactite_water_drip_particle"
+  },
+  "minecraft:dripping_honey": {
+    "bedrock_id": "minecraft:honey_drip_particle"
+  },
+  "minecraft:dripping_lava": {
+    "bedrock_id": "minecraft:lava_drip_particle"
+  },
+  "minecraft:dripping_obsidian_tear": {
+    "bedrock_id": "minecraft:obsidian_tear_particle"
+  },
+  "minecraft:dripping_water": {
+    "bedrock_id": "minecraft:water_drip_particle"
+  },
+  "minecraft:dust": {
+    "built_in": {}
+  },
+  "minecraft:dust_color_transition": {
+    "built_in": {}
+  },
+  "minecraft:dust_pillar": {
+    "bedrock_id": "minecraft:smash_ground_particle"
+  },
+  "minecraft:dust_plume": {
+    "bedrock_id": "minecraft:dust_plume"
+  },
+  "minecraft:effect": {
+    "built_in": {}
+  },
+  "minecraft:egg_crack": {
+    "bedrock_id": "minecraft:villager_happy"
+  },
+  "minecraft:elder_guardian": {
+    "level_event": "PARTICLE_SOUND_GUARDIAN_GHOST"
+  },
+  "minecraft:electric_spark": {
+    "bedrock_id": "minecraft:electric_spark_particle"
+  },
+  "minecraft:enchant": {
+    "bedrock_id": "minecraft:enchanting_table_particle"
+  },
+  "minecraft:enchanted_hit": {
+    "bedrock_id": "geyseropt:enchanted_hit_single"
+  },
+  "minecraft:end_rod": {
+    "bedrock_id": "minecraft:endrod"
+  },
+  "minecraft:explosion": {
+    "bedrock_id": "minecraft:large_explosion"
+  },
+  "minecraft:explosion_emitter": {
+    "bedrock_id": "minecraft:huge_explosion_emitter"
+  },
+  "minecraft:falling_dripstone_lava": {
+    "bedrock_id": "minecraft:stalactite_lava_drip_particle"
+  },
+  "minecraft:falling_dripstone_water": {
+    "bedrock_id": "minecraft:stalactite_water_drip_particle"
+  },
+  "minecraft:falling_dust": {
+    "built_in": {}
+  },
+  "minecraft:falling_honey": {
+    "bedrock_id": "minecraft:honey_drip_particle"
+  },
+  "minecraft:falling_lava": {
+    "bedrock_id": "minecraft:lava_drip_particle"
+  },
+  "minecraft:falling_nectar": {
+    "bedrock_id": "minecraft:nectar_drip_particle"
+  },
+  "minecraft:falling_obsidian_tear": {
+    "bedrock_id": "minecraft:obsidian_tear_particle"
+  },
+  "minecraft:falling_spore_blossom": {
+    "bedrock_id": "minecraft:spore_blossom_shower_particle"
+  },
+  "minecraft:falling_water": {
+    "bedrock_id": "minecraft:water_splash_particle"
+  },
+  "minecraft:firefly": {
+    "bedrock_id": "minecraft:firefly_particle"
+  },
+  "minecraft:firework": {
+    "bedrock_id": "minecraft:sparkler_emitter",
+    "color": 16777215
+  },
+  "minecraft:fishing": {
+    "bedrock_id": "minecraft:water_wake_particle"
+  },
+  "minecraft:flame": {
+    "bedrock_id": "minecraft:basic_flame_particle"
+  },
+  "minecraft:flash": {
+    "bedrock_id": "geyseropt:flash"
+  },
+  "minecraft:geyser": {
+    "built_in": {}
+  },
+  "minecraft:geyser_base": {
+    "built_in": {}
+  },
+  "minecraft:geyser_plume": {
+    "built_in": {}
+  },
+  "minecraft:geyser_poof": {
+    "built_in": {}
+  },
+  "minecraft:glow": {
+    "bedrock_id": "minecraft:glow_particle",
+    "color": {
+      "type": "random",
+      "values": [
+        10092492,
+        1336934
+      ]
+    }
+  },
+  "minecraft:glow_squid_ink": {
+    "bedrock_id": "minecraft:squid_ink_bubble"
+  },
+  "minecraft:gust": {
+    "bedrock_id": "minecraft:wind_charged_emitter"
+  },
+  "minecraft:gust_emitter_large": {
+    "bedrock_id": "minecraft:breeze_wind_explosion_emitter"
+  },
+  "minecraft:gust_emitter_small": {
+    "bedrock_id": "minecraft:wind_explosion_emitter"
+  },
+  "minecraft:happy_villager": {
+    "bedrock_id": "minecraft:villager_happy"
+  },
+  "minecraft:heart": {
+    "bedrock_id": "minecraft:heart_particle"
+  },
+  "minecraft:infested": {
+    "bedrock_id": "minecraft:infested_emitter"
+  },
+  "minecraft:instant_effect": {
+    "built_in": {}
+  },
+  "minecraft:item": {
+    "built_in": {}
+  },
+  "minecraft:item_cobweb": {
+    "level_event": "ANIMATION_SPAWN_COBWEB"
+  },
+  "minecraft:item_slime": {
+    "particle_type": "SLIME"
+  },
+  "minecraft:item_snowball": {
+    "particle_type": "SNOWBALL_POOF"
+  },
+  "minecraft:landing_honey": {
+    "bedrock_id": "geyseropt:landing_honey"
+  },
+  "minecraft:landing_lava": {
+    "bedrock_id": "geyseropt:landing_lava"
+  },
+  "minecraft:landing_obsidian_tear": {
+    "bedrock_id": "geyseropt:landing_obsidian_tear"
+  },
+  "minecraft:large_smoke": {
+    "bedrock_id": "minecraft:water_evaporation_actor_emitter"
+  },
+  "minecraft:lava": {
+    "bedrock_id": "minecraft:lava_particle"
+  },
+  "minecraft:mycelium": {
+    "bedrock_id": "minecraft:mycelium_dust_particle"
+  },
+  "minecraft:nautilus": {
+    "bedrock_id": "geyseropt:nautilus"
+  },
+  "minecraft:note": {
+    "bedrock_id": "minecraft:note_particle",
+    "color": {
+      "type": "random",
+      "variable": "variable.note_color"
+    }
+  },
+  "minecraft:noxious_gas": {
+    "bedrock_id": "minecraft:noxious_gas_particle"
+  },
+  "minecraft:ominous_spawning": {
+    "bedrock_id": "minecraft:ominous_spawning_particle"
+  },
+  "minecraft:orange_poplar_leaves": {
+    "bedrock_id": "minecraft:orange_poplar_leaves_particle"
+  },
+  "minecraft:pale_oak_leaves": {
+    "bedrock_id": "minecraft:pale_oak_leaves_particle"
+  },
+  "minecraft:pause_mob_growth": {
+    "bedrock_id": "minecraft:pause_mob_growth"
+  },
+  "minecraft:poof": {
+    "bedrock_id": "minecraft:explosion_manual"
+  },
+  "minecraft:portal": {
+    "bedrock_id": "minecraft:mob_portal"
+  },
+  "minecraft:raid_omen": {
+    "bedrock_id": "minecraft:raid_omen_ambient"
+  },
+  "minecraft:rain": {
+    "bedrock_id": "minecraft:rain_splash_particle"
+  },
+  "minecraft:red_poplar_leaves": {
+    "bedrock_id": "minecraft:red_poplar_leaves_particle"
+  },
+  "minecraft:reset_mob_growth": {
+    "bedrock_id": "minecraft:reset_mob_growth"
+  },
+  "minecraft:reverse_portal": {
+    "bedrock_id": "minecraft:portal_reverse_particle"
+  },
+  "minecraft:scrape": {
+    "bedrock_id": "minecraft:wax_particle",
+    "color": {
+      "type": "random",
+      "values": [
+        4821890,
+        7193758
+      ]
+    }
+  },
+  "minecraft:sculk_charge": {
+    "level_event": "SCULK_CHARGE"
+  },
+  "minecraft:sculk_charge_pop": {
+    "level_event": "SCULK_CHARGE_POP"
+  },
+  "minecraft:sculk_soul": {
+    "bedrock_id": "minecraft:sculk_soul_particle"
+  },
+  "minecraft:shriek": {
+    "bedrock_id": "minecraft:shriek_particle"
+  },
+  "minecraft:small_flame": {
+    "bedrock_id": "minecraft:candle_flame_particle"
+  },
+  "minecraft:small_gust": {
+    "bedrock_id": "minecraft:wind_charged_emitter"
+  },
+  "minecraft:smoke": {
+    "bedrock_id": "minecraft:basic_smoke_particle"
+  },
+  "minecraft:sneeze": {
+    "bedrock_id": "minecraft:sneeze"
+  },
+  "minecraft:snowflake": {
+    "bedrock_id": "minecraft:snowflake_particle"
+  },
+  "minecraft:sonic_boom": {
+    "bedrock_id": "minecraft:sonic_explosion"
+  },
+  "minecraft:soul": {
+    "bedrock_id": "minecraft:soul_particle"
+  },
+  "minecraft:soul_fire_flame": {
+    "bedrock_id": "minecraft:blue_flame_particle"
+  },
+  "minecraft:spit": {
+    "bedrock_id": "minecraft:llama_spit_smoke"
+  },
+  "minecraft:splash": {
+    "bedrock_id": "minecraft:water_splash_particle_manual"
+  },
+  "minecraft:spore_blossom_air": {
+    "bedrock_id": "minecraft:spore_blossom_ambient_particle"
+  },
+  "minecraft:squid_ink": {
+    "bedrock_id": "minecraft:squid_ink_bubble"
+  },
+  "minecraft:sulfur_bubbles": {
+    "bedrock_id": "minecraft:sulfur_bubble_particle"
+  },
+  "minecraft:sulfur_cube_goo": {
+    "bedrock_id": "minecraft:sulfur_cube_goo"
+  },
+  "minecraft:sweep_attack": {
+    "bedrock_id": "geyseropt:sweep_attack"
+  },
+  "minecraft:tinted_leaves": {
+    "built_in": {}
+  },
+  "minecraft:totem_of_undying": {
+    "bedrock_id": "minecraft:totem_particle"
+  },
+  "minecraft:trail": {
+    "built_in": {}
+  },
+  "minecraft:trial_omen": {
+    "bedrock_id": "minecraft:trial_omen_emitter"
+  },
+  "minecraft:trial_spawner_detection": {
+    "bedrock_id": "minecraft:trial_spawner_detection"
+  },
+  "minecraft:trial_spawner_detection_ominous": {
+    "bedrock_id": "minecraft:trial_spawner_detection_ominous"
+  },
+  "minecraft:underwater": {
+    "bedrock_id": "geyseropt:underwater"
+  },
+  "minecraft:vault_connection": {
+    "bedrock_id": "minecraft:vault_connection_particle"
+  },
+  "minecraft:vibration": {
+    "built_in": {}
+  },
+  "minecraft:warped_spore": {
+    "bedrock_id": "geyseropt:warped_spore"
+  },
+  "minecraft:wax_off": {
+    "bedrock_id": "minecraft:wax_particle",
+    "color": 16770559
+  },
+  "minecraft:wax_on": {
+    "bedrock_id": "minecraft:wax_particle",
+    "color": 15240212
+  },
+  "minecraft:white_ash": {
+    "bedrock_id": "geyseropt:white_ash"
+  },
+  "minecraft:white_smoke": {
+    "bedrock_id": "minecraft:white_smoke_particle"
+  },
+  "minecraft:witch": {
+    "bedrock_id": "minecraft:witchspell_emitter"
+  },
+  "minecraft:yellow_poplar_leaves": {
+    "bedrock_id": "minecraft:yellow_poplar_leaves_particle"
+  }
+}

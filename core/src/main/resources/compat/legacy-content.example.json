@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "contents": {
+    "entity": {
+      "minecraft:sulfur_cube": "1.26.50"
+    },
+    "sound": {
+      "eject_block": "26.60",
+      "absorb_block": "26.60"
+    },
+    "particle": {
+      "minecraft:sulfur_cube_particle": "1.26.60"
+    }
+  }
+}
