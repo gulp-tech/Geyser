@@ -1,0 +1,267 @@
+{
+  "schema": 1,
+  "source": "https://github.com/CloudburstMC/Protocol/tree/3.0",
+  "generatedBy": "tools/compat-gen/fetch_bedrock_versions.py",
+  "versions": [
+    {
+      "protocol": 291,
+      "version": "1.7.0"
+    },
+    {
+      "protocol": 313,
+      "version": "1.8.0"
+    },
+    {
+      "protocol": 332,
+      "version": "1.9.0"
+    },
+    {
+      "protocol": 340,
+      "version": "1.10.0"
+    },
+    {
+      "protocol": 354,
+      "version": "1.11.0"
+    },
+    {
+      "protocol": 361,
+      "version": "1.12.0"
+    },
+    {
+      "protocol": 388,
+      "version": "1.13.0"
+    },
+    {
+      "protocol": 389,
+      "version": "1.14.0"
+    },
+    {
+      "protocol": 390,
+      "version": "1.14.60"
+    },
+    {
+      "protocol": 407,
+      "version": "1.16.0"
+    },
+    {
+      "protocol": 408,
+      "version": "1.16.20"
+    },
+    {
+      "protocol": 419,
+      "version": "1.16.100"
+    },
+    {
+      "protocol": 422,
+      "version": "1.16.200"
+    },
+    {
+      "protocol": 428,
+      "version": "1.16.210"
+    },
+    {
+      "protocol": 431,
+      "version": "1.16.220"
+    },
+    {
+      "protocol": 440,
+      "version": "1.17.0"
+    },
+    {
+      "protocol": 448,
+      "version": "1.17.10"
+    },
+    {
+      "protocol": 465,
+      "version": "1.17.30"
+    },
+    {
+      "protocol": 471,
+      "version": "1.17.40"
+    },
+    {
+      "protocol": 475,
+      "version": "1.18.0"
+    },
+    {
+      "protocol": 486,
+      "version": "1.18.10"
+    },
+    {
+      "protocol": 503,
+      "version": "1.18.30"
+    },
+    {
+      "protocol": 527,
+      "version": "1.19.0"
+    },
+    {
+      "protocol": 534,
+      "version": "1.19.10"
+    },
+    {
+      "protocol": 544,
+      "version": "1.19.20"
+    },
+    {
+      "protocol": 545,
+      "version": "1.19.21"
+    },
+    {
+      "protocol": 554,
+      "version": "1.19.30"
+    },
+    {
+      "protocol": 557,
+      "version": "1.19.40"
+    },
+    {
+      "protocol": 560,
+      "version": "1.19.50"
+    },
+    {
+      "protocol": 567,
+      "version": "1.19.60"
+    },
+    {
+      "protocol": 568,
+      "version": "1.19.63"
+    },
+    {
+      "protocol": 575,
+      "version": "1.19.70"
+    },
+    {
+      "protocol": 582,
+      "version": "1.19.80"
+    },
+    {
+      "protocol": 589,
+      "version": "1.20.0"
+    },
+    {
+      "protocol": 594,
+      "version": "1.20.10"
+    },
+    {
+      "protocol": 618,
+      "version": "1.20.30"
+    },
+    {
+      "protocol": 622,
+      "version": "1.20.40"
+    },
+    {
+      "protocol": 630,
+      "version": "1.20.50"
+    },
+    {
+      "protocol": 649,
+      "version": "1.20.60"
+    },
+    {
+      "protocol": 662,
+      "version": "1.20.70"
+    },
+    {
+      "protocol": 671,
+      "version": "1.20.80"
+    },
+    {
+      "protocol": 685,
+      "version": "1.21.0"
+    },
+    {
+      "protocol": 686,
+      "version": "1.21.2"
+    },
+    {
+      "protocol": 712,
+      "version": "1.21.20"
+    },
+    {
+      "protocol": 729,
+      "version": "1.21.30"
+    },
+    {
+      "protocol": 748,
+      "version": "1.21.40"
+    },
+    {
+      "protocol": 766,
+      "version": "1.21.50"
+    },
+    {
+      "protocol": 776,
+      "version": "1.21.60"
+    },
+    {
+      "protocol": 786,
+      "version": "1.21.70"
+    },
+    {
+      "protocol": 800,
+      "version": "1.21.80"
+    },
+    {
+      "protocol": 818,
+      "version": "1.21.90"
+    },
+    {
+      "protocol": 819,
+      "version": "1.21.93"
+    },
+    {
+      "protocol": 827,
+      "version": "1.21.100"
+    },
+    {
+      "protocol": 844,
+      "version": "1.21.111"
+    },
+    {
+      "protocol": 859,
+      "version": "1.21.120"
+    },
+    {
+      "protocol": 860,
+      "version": "1.21.124"
+    },
+    {
+      "protocol": 898,
+      "version": "1.21.130"
+    },
+    {
+      "protocol": 924,
+      "version": "1.26.0"
+    },
+    {
+      "protocol": 944,
+      "version": "1.26.10"
+    },
+    {
+      "protocol": 975,
+      "version": "1.26.20"
+    },
+    {
+      "protocol": 1001,
+      "version": "1.26.30"
+    },
+    {
+      "protocol": 2168,
+      "version": "1.26.40"
+    },
+    {
+      "protocol": 2169,
+      "version": "1.26.45"
+    },
+    {
+      "protocol": 2193,
+      "version": "1.26.50"
+    },
+    {
+      "protocol": 2225,
+      "version": "1.26.60"
+    }
+  ]
+}
