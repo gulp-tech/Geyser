@@ -49,7 +49,7 @@ public final class CompatProtocols {
      * resources. Upstream families are never listed here, so the switch cannot accidentally
      * disable them.
      */
-    private static final Set<String> LEGACY_FAMILIES = Set.of("26_30");
+    private static final Set<String> LEGACY_FAMILIES = Set.of("26_0", "26_10", "26_20", "26_30");
 
     private CompatProtocols() {
     }
