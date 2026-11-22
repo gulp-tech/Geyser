@@ -335,14 +335,14 @@ public class CodecProcessor {
         }
 
         if (!legacyReceiptPackets && !Boolean.getBoolean("Geyser.PartneredServerPackets")) {
-            codecBuilder.updateSerializer(RefreshEntitlementsPacket.class, IGNORED_SERIALIZER);
-            codecBuilder.updateSerializer(PurchaseReceiptPacket.class, IGNORED_SERIALIZER);
-            codecBuilder.updateSerializer(PartyChangedPacket.class, IGNORED_SERIALIZER);
+            tryUpdateSerializer(codecBuilder, RefreshEntitlementsPacket.class, IGNORED_SERIALIZER);
+            tryUpdateSerializer(codecBuilder, PurchaseReceiptPacket.class, IGNORED_SERIALIZER);
+            tryUpdateSerializer(codecBuilder, PartyChangedPacket.class, IGNORED_SERIALIZER);
 
             // Added in 26.60
             if (GameProtocol.is26_60orHigher(codec.getProtocolVersion())) {
-                codecBuilder.updateSerializer(ClientboundMatchmakingStatePacket.class, IGNORED_SERIALIZER);
-                codecBuilder.updateSerializer(ServerboundMatchmakingCancelPacket.class, IGNORED_SERIALIZER);
+                tryUpdateSerializer(codecBuilder, ClientboundMatchmakingStatePacket.class, IGNORED_SERIALIZER);
+                tryUpdateSerializer(codecBuilder, ServerboundMatchmakingCancelPacket.class, IGNORED_SERIALIZER);
             }
         }
 
@@ -379,5 +379,17 @@ public class CodecProcessor {
         VarInts.readUnsignedInt(buffer); // block runtime id
         int streamSize = VarInts.readUnsignedInt(buffer);
         buffer.skipBytes(streamSize);
+    }
+
+    private static <T extends BedrockPacket> void tryUpdateSerializer(
+        BedrockCodec.Builder builder,
+        Class<T> packetClass,
+        BedrockPacketSerializer<T> serializer
+    ) {
+        try {
+            builder.updateSerializer(packetClass, serializer);
+        } catch (IllegalArgumentException ignored) {
+            // Packet does not exist in this legacy codec version.
+        }
     }
 }
