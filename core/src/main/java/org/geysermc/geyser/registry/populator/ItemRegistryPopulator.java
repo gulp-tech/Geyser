@@ -44,6 +44,9 @@ import net.kyori.adventure.key.Key;
 import org.cloudburstmc.nbt.NbtMap;
 import org.cloudburstmc.nbt.NbtMapBuilder;
 import org.cloudburstmc.nbt.NbtUtils;
+import org.cloudburstmc.protocol.bedrock.codec.v924.Bedrock_v924;
+import org.cloudburstmc.protocol.bedrock.codec.v944.Bedrock_v944;
+import org.cloudburstmc.protocol.bedrock.codec.v975.Bedrock_v975;
 import org.cloudburstmc.protocol.bedrock.codec.v1001.Bedrock_v1001;
 import org.cloudburstmc.protocol.bedrock.codec.v2168.Bedrock_v2168;
 import org.cloudburstmc.protocol.bedrock.codec.v2193.Bedrock_v2193;
@@ -148,10 +151,17 @@ public class ItemRegistryPopulator {
 
     // TODO: ideally split the populating of the Java ITEM registry (non-vanilla items) from the populating of item mappings
     public static void populate() {
-        List<PaletteVersion> paletteVersions = new ArrayList<>(5);
+        List<PaletteVersion> paletteVersions = new ArrayList<>(8);
+        if (CompatProtocols.familyEnabled("26_0")) {
+            paletteVersions.add(new PaletteVersion("26_0", Bedrock_v924.CODEC.getProtocolVersion(), WildernessBoundConverter.itemMappings()));
+        }
+        if (CompatProtocols.familyEnabled("26_10")) {
+            paletteVersions.add(new PaletteVersion("26_10", Bedrock_v944.CODEC.getProtocolVersion(), WildernessBoundConverter.itemMappings()));
+        }
+        if (CompatProtocols.familyEnabled("26_20")) {
+            paletteVersions.add(new PaletteVersion("26_20", Bedrock_v975.CODEC.getProtocolVersion(), WildernessBoundConverter.itemMappings()));
+        }
         if (CompatProtocols.familyEnabled("26_30")) {
-            // The oldest family we support needs every known item downgrade (items added in newer
-            // versions fall back to an item the client has).
             paletteVersions.add(new PaletteVersion("26_30", Bedrock_v1001.CODEC.getProtocolVersion(), WildernessBoundConverter.itemMappings()));
         }
         paletteVersions.add(new PaletteVersion("26_40", Bedrock_v2168.CODEC.getProtocolVersion(), WildernessBoundConverter.itemMappings()));

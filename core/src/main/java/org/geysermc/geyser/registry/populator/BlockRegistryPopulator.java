@@ -44,6 +44,9 @@ import org.cloudburstmc.nbt.NbtMap;
 import org.cloudburstmc.nbt.NbtMapBuilder;
 import org.cloudburstmc.nbt.NbtType;
 import org.cloudburstmc.nbt.NbtUtils;
+import org.cloudburstmc.protocol.bedrock.codec.v924.Bedrock_v924;
+import org.cloudburstmc.protocol.bedrock.codec.v944.Bedrock_v944;
+import org.cloudburstmc.protocol.bedrock.codec.v975.Bedrock_v975;
 import org.cloudburstmc.protocol.bedrock.codec.v1001.Bedrock_v1001;
 import org.cloudburstmc.protocol.bedrock.codec.v2168.Bedrock_v2168;
 import org.cloudburstmc.protocol.bedrock.codec.v2193.Bedrock_v2193;
@@ -125,10 +128,16 @@ public final class BlockRegistryPopulator {
 
     private static void registerBedrockBlocks() {
         ImmutableMap.Builder<ObjectIntPair<String>, BlockRemapper> blockMappersBuilder = ImmutableMap.<ObjectIntPair<String>, BlockRemapper>builder();
+        if (CompatProtocols.familyEnabled("26_0")) {
+            blockMappersBuilder.put(ObjectIntPair.of("26_0", Bedrock_v924.CODEC.getProtocolVersion()), ICanHasStates.INSTANCE);
+        }
+        if (CompatProtocols.familyEnabled("26_10")) {
+            blockMappersBuilder.put(ObjectIntPair.of("26_10", Bedrock_v944.CODEC.getProtocolVersion()), ICanHasStates.INSTANCE);
+        }
+        if (CompatProtocols.familyEnabled("26_20")) {
+            blockMappersBuilder.put(ObjectIntPair.of("26_20", Bedrock_v975.CODEC.getProtocolVersion()), ICanHasStates.INSTANCE);
+        }
         if (CompatProtocols.familyEnabled("26_30")) {
-            // The 26.30 palette is the real palette shipped with that version, so it only needs the
-            // downgrades that apply to every older family (custom blocks are defined against the
-            // newest palette and must be adapted to the oldest one).
             blockMappersBuilder.put(ObjectIntPair.of("26_30", Bedrock_v1001.CODEC.getProtocolVersion()), ICanHasStates.INSTANCE);
         }
         ImmutableMap<ObjectIntPair<String>, BlockRemapper> blockMappers = blockMappersBuilder
