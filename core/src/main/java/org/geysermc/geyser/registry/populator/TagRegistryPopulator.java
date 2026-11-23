@@ -36,6 +36,9 @@ import it.unimi.dsi.fastutil.objects.ObjectIntPair;
 import org.cloudburstmc.protocol.bedrock.codec.v924.Bedrock_v924;
 import org.cloudburstmc.protocol.bedrock.codec.v944.Bedrock_v944;
 import org.cloudburstmc.protocol.bedrock.codec.v975.Bedrock_v975;
+import org.cloudburstmc.protocol.bedrock.codec.v924.Bedrock_v924;
+import org.cloudburstmc.protocol.bedrock.codec.v944.Bedrock_v944;
+import org.cloudburstmc.protocol.bedrock.codec.v975.Bedrock_v975;
 import org.cloudburstmc.protocol.bedrock.codec.v1001.Bedrock_v1001;
 import org.cloudburstmc.protocol.bedrock.codec.v2168.Bedrock_v2168;
 import org.cloudburstmc.protocol.bedrock.codec.v2193.Bedrock_v2193;
@@ -76,7 +79,16 @@ public final class TagRegistryPopulator {
             }
         };
 
-        List<ObjectIntPair<String>> paletteVersions = new ArrayList<>(4);
+        List<ObjectIntPair<String>> paletteVersions = new ArrayList<>(7);
+        if (CompatProtocols.familyEnabled("26_0")) {
+            paletteVersions.add(ObjectIntPair.of("26_30", Bedrock_v924.CODEC.getProtocolVersion()));
+        }
+        if (CompatProtocols.familyEnabled("26_10")) {
+            paletteVersions.add(ObjectIntPair.of("26_30", Bedrock_v944.CODEC.getProtocolVersion()));
+        }
+        if (CompatProtocols.familyEnabled("26_20")) {
+            paletteVersions.add(ObjectIntPair.of("26_30", Bedrock_v975.CODEC.getProtocolVersion()));
+        }
         if (CompatProtocols.familyEnabled("26_30")) {
             // Compat: item tags are shared with 26.40+ (same file), the protocol entry is what matters
             paletteVersions.add(ObjectIntPair.of("26_30", Bedrock_v1001.CODEC.getProtocolVersion()));
