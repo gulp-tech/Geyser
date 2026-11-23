@@ -70,4 +70,8 @@ public final class CompatProtocols {
     public static boolean familyEnabled(String paletteSuffix) {
         return !LEGACY_FAMILIES.contains(paletteSuffix) || LEGACY_PROTOCOLS;
     }
+
+    public static boolean isLegacyFamily(String paletteSuffix) {
+        return LEGACY_FAMILIES.contains(paletteSuffix);
+    }
 }
