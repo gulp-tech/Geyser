@@ -328,6 +328,9 @@ public class ItemRegistryPopulator {
 
                 String bedrockIdentifier = mappingItem.getBedrockIdentifier();
                 ItemDefinition definition = definitions.get(bedrockIdentifier);
+                if (definition == null && CompatProtocols.isLegacyFamily(palette.version())) {
+                    definition = definitions.get("minecraft:stone");
+                }
                 if (definition == null) {
                     throw new RuntimeException("Missing Bedrock ItemDefinition in version " + palette.version() + " for mapping: " + mappingItem);
                 }
