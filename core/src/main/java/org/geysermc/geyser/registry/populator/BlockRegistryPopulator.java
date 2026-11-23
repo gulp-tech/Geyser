@@ -304,8 +304,10 @@ public final class BlockRegistryPopulator {
                             bedrockDefinition = new GeyserBedrockBlock(-1, NbtMap.fromMap(Map.of(
                                 "name", javaIdReplacement
                             )));
-                        } else if (CompatProtocols.isLegacyFamily(palette.key()) && !blockStateDefinitions.isEmpty()) {
-                            bedrockDefinition = blockStateDefinitions.values().iterator().next();
+                        } else if (CompatProtocols.isLegacyFamily(palette.key())) {
+                            bedrockDefinition = new GeyserBedrockBlock(0, NbtMap.fromMap(Map.of(
+                                "name", "minecraft:stone"
+                            )));
                         } else {
                             throw new RuntimeException("""
                                 Unable to find %s Bedrock runtime ID for %s! Original block tag:
