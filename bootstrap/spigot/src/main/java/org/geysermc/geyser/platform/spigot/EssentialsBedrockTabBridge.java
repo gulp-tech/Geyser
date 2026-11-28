@@ -40,7 +40,6 @@ import org.cloudburstmc.protocol.bedrock.data.command.CommandOverloadData;
 import org.cloudburstmc.protocol.bedrock.data.command.CommandParamData;
 import org.cloudburstmc.protocol.bedrock.data.command.CommandPermission;
 import org.cloudburstmc.protocol.bedrock.packet.AvailableCommandsPacket;
-import org.cloudburstmc.protocol.bedrock.packet.UpdateSoftEnumPacket;
 import org.geysermc.geyser.GeyserImpl;
 import org.geysermc.geyser.session.GeyserSession;
 
@@ -113,40 +112,13 @@ public final class EssentialsBedrockTabBridge implements Listener {
     }
 
     private void updatePlayerHomes(Player player) {
-        if (!player.isOnline()) {
-            return;
-        }
-        GeyserSession session = geyser.connectionByUuid(player.getUniqueId());
-        if (session == null) {
-            return;
-        }
-        Plugin ess = Bukkit.getPluginManager().getPlugin("Essentials");
-        if (ess == null || !ess.isEnabled()) {
-            return;
-        }
-
-        sendSoftEnumUpdate(session, HOMES_ENUM, getPlayerHomes(ess, player.getUniqueId()));
+        sendInitialCommands(player);
     }
 
     private void updateAllOnlineWarps() {
-        Plugin ess = Bukkit.getPluginManager().getPlugin("Essentials");
-        if (ess == null || !ess.isEnabled()) {
-            return;
-        }
-        List<String> warps = getWarps(ess);
         for (Player player : Bukkit.getOnlinePlayers()) {
-            GeyserSession session = geyser.connectionByUuid(player.getUniqueId());
-            if (session != null) {
-                sendSoftEnumUpdate(session, WARPS_ENUM, warps);
-            }
+            sendInitialCommands(player);
         }
-    }
-
-    private void sendSoftEnumUpdate(GeyserSession session, String enumName, List<String> values) {
-        UpdateSoftEnumPacket packet = new UpdateSoftEnumPacket();
-        packet.setType(UpdateSoftEnumPacket.Type.SET);
-        packet.setSoftEnum(new CommandEnumData(enumName, toEnumMap(values), true));
-        session.sendUpstreamPacket(packet);
     }
 
     private CommandData createCommand(String name, String description, String enumName, List<String> values) {
