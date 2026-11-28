@@ -29,6 +29,22 @@ import it.unimi.dsi.fastutil.ints.IntArrayList;
 import it.unimi.dsi.fastutil.ints.IntList;
 import org.checkerframework.checker.nullness.qual.Nullable;
 import org.cloudburstmc.protocol.bedrock.codec.BedrockCodec;
+import org.cloudburstmc.protocol.bedrock.codec.v685.Bedrock_v685;
+import org.cloudburstmc.protocol.bedrock.codec.v686.Bedrock_v686;
+import org.cloudburstmc.protocol.bedrock.codec.v712.Bedrock_v712;
+import org.cloudburstmc.protocol.bedrock.codec.v729.Bedrock_v729;
+import org.cloudburstmc.protocol.bedrock.codec.v748.Bedrock_v748;
+import org.cloudburstmc.protocol.bedrock.codec.v766.Bedrock_v766;
+import org.cloudburstmc.protocol.bedrock.codec.v776.Bedrock_v776;
+import org.cloudburstmc.protocol.bedrock.codec.v786.Bedrock_v786;
+import org.cloudburstmc.protocol.bedrock.codec.v800.Bedrock_v800;
+import org.cloudburstmc.protocol.bedrock.codec.v818.Bedrock_v818;
+import org.cloudburstmc.protocol.bedrock.codec.v819.Bedrock_v819;
+import org.cloudburstmc.protocol.bedrock.codec.v827.Bedrock_v827;
+import org.cloudburstmc.protocol.bedrock.codec.v844.Bedrock_v844;
+import org.cloudburstmc.protocol.bedrock.codec.v859.Bedrock_v859;
+import org.cloudburstmc.protocol.bedrock.codec.v860.Bedrock_v860;
+import org.cloudburstmc.protocol.bedrock.codec.v898.Bedrock_v898;
 import org.cloudburstmc.protocol.bedrock.codec.v924.Bedrock_v924;
 import org.cloudburstmc.protocol.bedrock.codec.v944.Bedrock_v944;
 import org.cloudburstmc.protocol.bedrock.codec.v975.Bedrock_v975;
@@ -88,7 +104,23 @@ public final class GameProtocol {
     static {
         // Strict ordering
         // Compat: the first family outside the upstream window, enabled by the legacy-protocols flag
-        if (CompatProtocols.legacyProtocolsEnabled()) {
+        if (true) {
+            register(Bedrock_v685.CODEC, "1.21.0");
+            register(Bedrock_v686.CODEC, "1.21.2");
+            register(Bedrock_v712.CODEC, "1.21.20");
+            register(Bedrock_v729.CODEC, "1.21.30");
+            register(Bedrock_v748.CODEC, "1.21.40");
+            register(Bedrock_v766.CODEC, "1.21.50");
+            register(Bedrock_v776.CODEC, "1.21.60");
+            register(Bedrock_v786.CODEC, "1.21.70");
+            register(Bedrock_v800.CODEC, "1.21.80");
+            register(Bedrock_v818.CODEC, "1.21.90");
+            register(Bedrock_v819.CODEC, "1.21.93");
+            register(Bedrock_v827.CODEC, "1.21.100");
+            register(Bedrock_v844.CODEC, "1.21.111");
+            register(Bedrock_v859.CODEC, "1.21.120");
+            register(Bedrock_v860.CODEC, "1.21.124");
+            register(Bedrock_v898.CODEC, "1.21.130");
             register(Bedrock_v924.CODEC, "26.0");
             register(Bedrock_v944.CODEC, "26.10");
             register(Bedrock_v975.CODEC, "26.20");

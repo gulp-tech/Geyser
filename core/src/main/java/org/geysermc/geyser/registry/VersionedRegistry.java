@@ -73,6 +73,15 @@ public class VersionedRegistry<V> extends AbstractMappedRegistry<Integer, V, Int
             }
         }
         if (current == null) {
+            Int2ObjectMap.Entry<V> earliest = null;
+            for (Int2ObjectMap.Entry<V> entry : this.mappings.int2ObjectEntrySet()) {
+                if (earliest == null || entry.getIntKey() < earliest.getIntKey()) {
+                    earliest = entry;
+                }
+            }
+            if (earliest != null) {
+                return earliest.getValue();
+            }
             throw new IllegalArgumentException("No appropriate value for version: " + version);
         }
         return current.getValue();

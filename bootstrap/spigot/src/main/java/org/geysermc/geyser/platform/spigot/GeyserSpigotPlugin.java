@@ -337,6 +337,8 @@ public class GeyserSpigotPlugin extends JavaPlugin implements GeyserBootstrap {
         pluginManager.registerEvents(new GeyserPistonListener(geyser, this.geyserWorldManager), this);
 
         pluginManager.registerEvents(new GeyserSpigotUpdateListener(), this);
+
+        pluginManager.registerEvents(new BedrockCombatListener(), this);
     }
 
     @Override
