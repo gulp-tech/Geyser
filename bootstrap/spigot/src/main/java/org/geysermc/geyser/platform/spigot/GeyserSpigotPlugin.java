@@ -339,8 +339,6 @@ public class GeyserSpigotPlugin extends JavaPlugin implements GeyserBootstrap {
         pluginManager.registerEvents(new GeyserSpigotUpdateListener(), this);
 
         pluginManager.registerEvents(new BedrockCombatListener(), this);
-
-        pluginManager.registerEvents(new EssentialsBedrockTabBridge(this, geyser), this);
     }
 
     @Override
