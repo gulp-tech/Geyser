@@ -27,6 +27,10 @@ package org.geysermc.geyser.network.bedrock;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.channel.ChannelOutboundHandlerAdapter;
+import io.netty.channel.ChannelPromise;
+import org.cloudburstmc.protocol.bedrock.netty.codec.packet.BedrockPacketCodec;
+import org.cloudburstmc.protocol.bedrock.packet.BedrockPacket;
 import org.checkerframework.checker.nullness.qual.Nullable;
 import org.cloudburstmc.protocol.bedrock.codec.BedrockCodec;
 import org.cloudburstmc.protocol.bedrock.codec.compat.BedrockCompat;
@@ -206,6 +210,23 @@ public class LoginPacketHandler extends LoggingPacketHandler {
         // Set the block translation based off of version
         session.setBlockMappings(BlockRegistries.BLOCKS.forVersion(loginProtocolVersion));
         session.setItemMappings(Registries.ITEMS.forVersion(loginProtocolVersion));
+
+        var pipeline = session.getUpstream().getSession().getPeer().getChannel().pipeline();
+        if (pipeline.get(BedrockPacketCodec.NAME) != null && pipeline.get("geyser-packet-filter") == null) {
+            pipeline.addAfter(BedrockPacketCodec.NAME, "geyser-packet-filter", new ChannelOutboundHandlerAdapter() {
+                @Override
+                public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) throws Exception {
+                    if (msg instanceof BedrockPacket packet) {
+                        var codec = session.getUpstream().getSession().getCodec();
+                        if (codec != null && codec.getPacketDefinition(packet.getClass()) == null) {
+                            promise.trySuccess();
+                            return;
+                        }
+                    }
+                    super.write(ctx, msg, promise);
+                }
+            });
+        }
 
         geyser.getSessionManager().addPendingSession(session);
 
