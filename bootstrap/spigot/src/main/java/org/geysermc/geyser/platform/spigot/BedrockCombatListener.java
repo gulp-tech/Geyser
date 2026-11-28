@@ -50,6 +50,7 @@ public final class BedrockCombatListener implements Listener {
     private static final double BEDROCK_ATTACK_SPEED = 1024.0;
     private static final double ARMOR_DAMAGE_DIVISOR = 1.2;
     private static final double MACE_CLICK_DAMAGE_MULTIPLIER = 0.5;
+    private static final double GENERAL_DAMAGE_MULTIPLIER = 0.75;
     private static final float MACE_SMASH_MIN_FALL_DISTANCE = 1.5f;
     private static final double MAX_KNOCKBACK_Y = 0.36;
     private static final long COMBAT_VELOCITY_WINDOW_MS = 100L;
@@ -82,8 +83,12 @@ public final class BedrockCombatListener implements Listener {
     public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
         if (event.getDamager() instanceof Player attacker) {
             ItemStack weapon = attacker.getInventory().getItemInMainHand();
-            if (weapon.getType() == Material.MACE && attacker.getFallDistance() < MACE_SMASH_MIN_FALL_DISTANCE) {
-                event.setDamage(event.getDamage() * MACE_CLICK_DAMAGE_MULTIPLIER);
+            if (weapon.getType() == Material.MACE) {
+                if (attacker.getFallDistance() < MACE_SMASH_MIN_FALL_DISTANCE) {
+                    event.setDamage(event.getDamage() * MACE_CLICK_DAMAGE_MULTIPLIER);
+                }
+            } else {
+                event.setDamage(event.getDamage() * GENERAL_DAMAGE_MULTIPLIER);
             }
         }
 
